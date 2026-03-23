@@ -3,68 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome Hisham C</title>
+    <title>Hisham C | Portfolio</title>
 
     <style>
-        body {
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(to right, #4facfe, #00f2fe);
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        }
+
+        body {
+            line-height: 1.6;
+            background: #f4f6f9;
+            color: #333;
+        }
+
+        header {
+            background: #1e293b;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .container {
+            width: 85%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header h1 {
+            float: left;
+        }
+
+        nav {
+            float: right;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        .hero {
+            background: linear-gradient(to right, #38bdf8, #6366f1);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        section {
+            padding: 40px 0;
         }
 
         .card {
             background: white;
-            padding: 40px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-            width: 350px;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
-        h1 {
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        p {
-            color: #666;
-            font-size: 16px;
-        }
-
-        .btn {
-            margin-top: 20px;
-            padding: 10px 20px;
-            border: none;
-            background: #4facfe;
+        footer {
+            background: #1e293b;
             color: white;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
         }
 
-        .btn:hover {
-            background: #00c6ff;
+        @media(max-width: 768px) {
+            header h1, nav {
+                float: none;
+                text-align: center;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
+
 <body>
 
-<div class="card">
-    <h1>Welcome, Hisham C 👋</h1>
-    <p>Glad to have you here! This is your personalized HTML page.</p>
+<header>
+    <div class="container">
+        <h1>Hisham C</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    <button class="btn" onclick="showMessage()">Click Me</button>
-</div>
+<section class="hero">
+    <div class="container">
+        <h2>Welcome to My Portfolio</h2>
+        <p>Linux Administrator | Cloud Enthusiast | DevOps Learner</p>
+    </div>
+</section>
 
-<script>
-    function showMessage() {
-        alert("Hello Hisham C! Have a great day 😊");
-    }
-</script>
+<section id="about">
+    <div class="container">
+        <div class="card">
+            <h2>About Me</h2>
+            <p>
+                I am a Junior Linux System Administrator with hands-on experience in Linux (RHEL), AWS cloud services,
+                and Docker. I am passionate about building reliable and secure infrastructure.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <div class="container">
+        <div class="card">
+            <h2>Skills</h2>
+            <ul>
+                <li>Linux (RHEL, Ubuntu)</li>
+                <li>AWS Cloud</li>
+                <li>Docker & Containerization</li>
+                <li>Networking Basics</li>
+                <li>Server Administration</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="container">
+        <div class="card">
+            <h2>Projects</h2>
+            <p>
+                Built a full-stack service platform using React and Django with features like booking management,
+                service reviews, and predictive pricing.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <div class="card">
+            <h2>Contact</h2>
+            <p>Email: your-email@example.com</p>
+            <p>Phone: +91 XXXXX XXXXX</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Hisham C | All Rights Reserved</p>
+</footer>
 
 </body>
 </html>
